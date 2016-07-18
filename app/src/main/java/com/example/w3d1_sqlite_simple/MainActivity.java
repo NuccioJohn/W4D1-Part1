@@ -48,13 +48,15 @@ public class MainActivity extends AppCompatActivity {
         UsersDatabaseHelper usersDatabaseHelper = new UsersDatabaseHelper(getApplicationContext());
         SQLiteDatabase sqLiteDatabase = usersDatabaseHelper.getReadableDatabase();
 
-        Cursor cursor = sqLiteDatabase.query(UsersDatabaseHelper.TABLE_USERS,
-                null,
+       Cursor cursor = sqLiteDatabase.query(UsersDatabaseHelper.TABLE_USERS,
+                new String[]{UsersDatabaseHelper.KEY_AGE, UsersDatabaseHelper.KEY_USER_NAME},
                 null,
                 null,
                 null,
                 null,
                 null);
+
+        //Cursor cursor = sqLiteDatabase.rawQuery("select id, name from users", null);
 
         cursor.moveToFirst();
 
