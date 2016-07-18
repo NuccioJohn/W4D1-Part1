@@ -14,13 +14,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!" />
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/line1" />
 
     <Button
-        android:onClick="doMagic"
+        android:onClick="fillDatabase"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:/>
+        android:onClick="readData"
+        android:id="@+id/b1"/>
 </LinearLayout>
